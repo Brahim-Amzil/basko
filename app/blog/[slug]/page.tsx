@@ -256,8 +256,11 @@ const getBlogPostData = (slug: string) => {
 // }
 
 // First, let's define the correct type for the page props
+import { Params } from 'next/dist/shared/lib/router/utils/route-matcher';
+
+// Update the type definition to match Next.js expectations
 type BlogPageProps = {
-  params: {
+  params: Params & {
     slug: string;
   };
   searchParams?: { [key: string]: string | string[] | undefined };
