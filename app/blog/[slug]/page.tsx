@@ -260,6 +260,7 @@ type BlogPageProps = {
   params: {
     slug: string;
   };
+  searchParams?: { [key: string]: string | string[] | undefined };
 };
 
 // Then update your component to use this type
