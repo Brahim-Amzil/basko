@@ -255,9 +255,19 @@ const getBlogPostData = (slug: string) => {
 //       );
 // }
 
-export default function BlogPost({ params }: { params: { slug: string } }) {
+// First, let's define the correct type for the page props
+type BlogPageProps = {
+  params: {
+    slug: string;
+  };
+};
+
+// Then update your component to use this type
+export default function BlogPostPage({ params }: BlogPageProps) {
   const { slug } = params;
-  const post = getBlogPostData(slug);
+  
+  // Find the blog post with the matching slug
+  const post = blogPosts.find((post) => post.slug === slug);
   
   // Keep only this renderContent function inside the component
   const renderContent = () => {
