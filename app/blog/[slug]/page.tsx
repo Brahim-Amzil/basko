@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Metadata } from "next";
 import Image from "next/image";
+import { Params } from 'next/dist/shared/lib/router/utils/route-matcher';
 
 export const metadata: Metadata = {
   title: "Blog Post | Virtual Dimensions",
@@ -255,12 +256,9 @@ const getBlogPostData = (slug: string) => {
 //       );
 // }
 
-// First, let's define the correct type for the page props
-import { Params } from 'next/dist/shared/lib/router/utils/route-matcher';
-
 // Update the type definition to match Next.js expectations
 type BlogPageProps = {
-  params: Params & {
+  params: {
     slug: string;
   };
   searchParams?: { [key: string]: string | string[] | undefined };
