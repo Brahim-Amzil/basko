@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { Metadata } from "next";
 import Image from "next/image";
-import { Params } from 'next/dist/shared/lib/router/utils/route-matcher';
 
 export const metadata: Metadata = {
   title: "Blog Post | Virtual Dimensions",
