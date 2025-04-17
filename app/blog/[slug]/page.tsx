@@ -47,12 +47,8 @@ const getBlogPostData = (slug: string) => {
   return blogPosts.find(post => post.slug === slug);
 };
 
-// Use the Next.js recommended approach for page props
-export default function BlogPostPage({
-  params,
-}: {
-  params: { slug: string }
-}) {
+// Use a simpler approach without custom types
+export default async function BlogPostPage({ params }: { params: { slug: string } }) {
   const { slug } = params;
   
   // Find the blog post with the matching slug
