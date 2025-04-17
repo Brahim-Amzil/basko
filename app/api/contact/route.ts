@@ -19,7 +19,7 @@ export async function POST(request: Request) {
 
     // Email content
     const mailOptions = {
-      from: process.env.EMAIL_FROM || '"Virtual Dimensions" <contact@baskomedia.com>',
+      from: process.env.EMAIL_FROM || '"Basko Media" <contact@baskomedia.com>',
       to: process.env.ADMIN_EMAIL || 'contact@baskomedia.com',
       subject: `New Contact Form Submission from ${name}`,
       text: `

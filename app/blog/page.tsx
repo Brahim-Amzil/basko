@@ -3,7 +3,7 @@ import { Metadata } from "next";
 import BlogCard from "@/components/blog-card";
 
 export const metadata: Metadata = {
-  title: "Blog | Virtual Dimensions",
+  title: "Blog | Basko Media",
   description: "Read our latest articles on web development and digital transformation",
 };
 
