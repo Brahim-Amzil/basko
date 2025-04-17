@@ -149,15 +149,15 @@ export default function Home() {
                 
                 // Longer duration for slower animation (2000ms = 2 seconds, which is about half speed)
                 const duration = 2000;
-                let startTime = null;
+                let startTime: number | null = null;
                 
-                function animation(currentTime) {
+                function animation(currentTime: number) {
                   if (startTime === null) startTime = currentTime;
                   const timeElapsed = currentTime - startTime;
                   const progress = Math.min(timeElapsed / duration, 1);
                   
                   // Ease-out function: cubic ease out
-                  const easeOutCubic = progress => 1 - Math.pow(1 - progress, 3);
+                  const easeOutCubic = (progress: number) => 1 - Math.pow(1 - progress, 3);
                   
                   window.scrollTo(0, startPosition + distance * easeOutCubic(progress));
                   

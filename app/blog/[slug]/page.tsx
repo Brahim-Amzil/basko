@@ -7,32 +7,58 @@ export const metadata: Metadata = {
   description: "Read our latest articles on web development and digital transformation",
 };
 
-// Helper function to get blog post data
-const getBlogPostData = (slug: string) => {
-  const blogPosts = [
-    {
-      title: "Website vs Mobile App: Which One Does Your Business Need?",
-      slug: "website-vs-mobile-app",
-      date: "May 10, 2024",
-      readTime: "6 min read",
-      coverImage: "/images/blog/website-vs-app.jpg",
-      category: "Strategy"
-    },
-    // Other blog posts remain the same
-  ];
-  
-  return blogPosts.find(post => post.slug === slug);
-};
+// Define the blog posts data
+const blogPosts = [
+  {
+    title: "Website vs Mobile App: Which One Does Your Business Need?",
+    slug: "website-vs-mobile-app",
+    date: "May 10, 2024",
+    readTime: "6 min read",
+    coverImage: "/images/blog/website-vs-app.jpg",
+    category: "Strategy"
+  },
+  {
+    title: "Why Every Business Needs a Website in 2025",
+    slug: "why-businesses-need-websites",
+    date: "May 5, 2024",
+    readTime: "5 min read",
+    coverImage: "/images/blog/business-website.jpg",
+    category: "Business"
+  },
+  {
+    title: "The Essential Guide to Starting Your Digital Transformation Journey",
+    slug: "starting-digital-transformation",
+    date: "April 28, 2024",
+    readTime: "7 min read",
+    coverImage: "/images/blog/digital-transformation-journey.jpg",
+    category: "Digital Transformation"
+  },
+  {
+    title: "Why Digital Transformation Is Essential for Your Business",
+    slug: "why-digital-transformation-essential",
+    date: "June 5, 2024",
+    readTime: "5 min read",
+    coverImage: "/images/blog/digital-transformation-matters.jpg",
+    category: "Digital Transformation"
+  }
+];
 
-// Use the most basic Next.js page component pattern
-type Props = {
-  params: { slug: string }
+// Generate static params for all blog posts
+export async function generateStaticParams() {
+  return blogPosts.map((post) => ({
+    slug: post.slug,
+  }));
 }
 
-export default function BlogPostPage({ params }: Props) {
-  const { slug } = params;
-  const post = getBlogPostData(slug);
+// Simple function to get blog post data
+function getBlogPost(slug: string) {
+  return blogPosts.find(post => post.slug === slug) || null;
+}
 
+// Simple page component without any fancy types
+export default function Page({ params }: any) {
+  const post = getBlogPost(params.slug);
+  
   if (!post) {
     return (
       <div className="container mx-auto px-4 py-12">
@@ -49,7 +75,7 @@ export default function BlogPostPage({ params }: Props) {
 
   // Simplified content rendering
   let content;
-  if (slug === "website-vs-mobile-app") {
+  if (params.slug === "website-vs-mobile-app") {
     content = (
       <>
         <h2 className="text-2xl font-bold mb-4">1. Understanding the Core Differences</h2>
@@ -78,7 +104,7 @@ export default function BlogPostPage({ params }: Props) {
         </p>
       </>
     );
-  } else if (slug === "why-businesses-need-websites") {
+  } else if (params.slug === "why-businesses-need-websites") {
     content = (
       <>
         <h2 className="text-2xl font-bold mb-4">1. The Digital First Impression</h2>
@@ -107,7 +133,7 @@ export default function BlogPostPage({ params }: Props) {
         </p>
       </>
     );
-  } else if (slug === "starting-digital-transformation") {
+  } else if (params.slug === "starting-digital-transformation") {
     content = (
       <>
         <h2 className="text-2xl font-bold mb-4">1. What Is Digital Transformation?</h2>
@@ -136,7 +162,7 @@ export default function BlogPostPage({ params }: Props) {
         </p>
       </>
     );
-  } else if (slug === "why-digital-transformation-essential") {
+  } else if (params.slug === "why-digital-transformation-essential") {
     content = (
       <>
         <h2 className="text-2xl font-bold mb-4">1. The Digital Shift Is No Longer Optional</h2>
