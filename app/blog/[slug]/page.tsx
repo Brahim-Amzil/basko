@@ -8,13 +8,8 @@ export const metadata: Metadata = {
 };
 
 // Helper function to get blog post data
-// In the getBlogPostData function, update the coverImage paths:
-
-// Update the getBlogPostData function to include the new article
-
 const getBlogPostData = (slug: string) => {
   const blogPosts = [
-    // Removed the web-development-trends-2025 article from this array
     {
       title: "Website vs Mobile App: Which One Does Your Business Need?",
       slug: "website-vs-mobile-app",
@@ -52,209 +47,6 @@ const getBlogPostData = (slug: string) => {
   return blogPosts.find(post => post.slug === slug);
 };
 
-// Then in the renderContent function, add a new case:
-
-// Remove this entire top-level renderContent function
-// const renderContent = () => {
-//   switch (slug) {
-//     case "web-development-trends-2025":
-//       return (
-//         <>
-//           <h2 className="text-2xl font-bold mb-4">1. AI-Powered Development</h2>
-//           
-//           <p>
-//             Artificial intelligence is transforming how we build websites and applications:
-//           </p>
-//           
-//           <h3 className="text-xl font-semibold mb-2 mt-4">AI-Assisted Coding</h3>
-//           <p>
-//             AI coding assistants will become more sophisticated, helping developers write better code faster. These tools will go beyond simple autocomplete to suggest entire functions, identify potential bugs, and even optimize performance.
-//           </p>
-//           
-//           <h3 className="text-xl font-semibold mb-2 mt-4">Automated Testing and QA</h3>
-//           <p>
-//             AI will revolutionize testing by automatically generating test cases, identifying edge cases humans might miss, and performing visual regression testing with greater accuracy.
-//           </p>
-//           
-//           <h3 className="text-xl font-semibold mb-2 mt-4">Personalization Engines</h3>
-//           <p>
-//             AI-driven personalization will become more accessible to developers, allowing even smaller websites to offer highly tailored user experiences based on behavior, preferences, and context.
-//           </p>
-//           
-//           <h2 className="text-2xl font-bold mb-4 mt-8">2. WebAssembly Expansion</h2>
-//           
-//           <p>
-//             WebAssembly (Wasm) will continue its growth as a core web technology:
-//           </p>
-//           
-//           <ul className="list-disc pl-6 my-4">
-//             <li><strong>Language diversity:</strong> More programming languages will compile efficiently to Wasm, giving developers greater flexibility in their technology choices</li>
-//             <li><strong>Performance-intensive applications:</strong> Wasm will enable more complex applications to run in the browser, from advanced video editing to scientific simulations</li>
-//             <li><strong>Edge computing:</strong> Wasm will play a crucial role in edge computing scenarios, enabling complex processing closer to users</li>
-//           </ul>
-//           
-//           <h2 className="text-2xl font-bold mb-4 mt-8">3. Headless Architecture Dominance</h2>
-//           <p>
-//             Headless approaches will become the standard for complex web projects.
-//           </p>
-//           
-//           <h2 className="text-2xl font-bold mb-4 mt-8">4. Enhanced Web Accessibility</h2>
-//           <p>
-//             Accessibility will move from a compliance checkbox to a core design principle.
-//           </p>
-//           
-//           <h2 className="text-2xl font-bold mb-4 mt-8">5. Sustainable Web Development</h2>
-//           <p>
-//             Environmental impact will become a key consideration in web development.
-//           </p>
-//         </>
-//       );
-//     
-//     case "website-vs-mobile-app":
-//       return (
-//         <>
-//           <h2 className="text-2xl font-bold mb-4">1. Understanding the Core Differences</h2>
-//           <p>
-//             Websites and mobile apps serve different purposes and offer distinct advantages. A website is accessible through any browser and works across all devices, making it perfect for reaching a broad audience. In contrast, mobile apps are downloaded and installed on smartphones, offering deeper engagement and better performance for frequent users. Knowing these core differences is the first step in deciding which platform suits your business needs.
-//           </p>
-//           
-//           <h2 className="text-2xl font-bold mb-4 mt-8">2. When a Website Makes More Sense</h2>
-//           <p>
-//             For most businesses, especially when just starting out, a website is essential. It's cost-effective, easy to maintain, and ensures your business is discoverable on search engines. Whether you're providing information, showcasing services, or generating leads, a professional website boosts credibility and acts as your digital storefront—accessible to anyone, anywhere, at any time.
-//           </p>
-//           
-//           <h2 className="text-2xl font-bold mb-4 mt-8">3. The Power of Mobile Apps</h2>
-//           <p>
-//             Mobile apps shine when it comes to personalized experiences, offline access, and long-term customer engagement. If your business model involves frequent user interaction—like booking, shopping, or messaging—an app can offer smoother performance, push notifications, and device-specific features. Apps are especially valuable for building loyalty and offering functionality that goes beyond what websites can typically handle.
-//           </p>
-//           
-//           <h2 className="text-2xl font-bold mb-4 mt-8">4. Choosing Based on Business Goals</h2>
-//           <p>
-//             Your decision should align with your business goals, budget, and target audience. A website is usually the best place to start, especially for visibility and information-sharing. If you're looking to create a more immersive, feature-rich experience or build a community around your brand, an app might be the better investment. In some cases, a combination of both is ideal—each serving different parts of your user journey.
-//           </p>
-//           
-//           <h2 className="text-2xl font-bold mb-4 mt-8">5. Let's Help You Decide</h2>
-//           <p>
-//             Not sure which direction to take? That's where we come in. We help businesses evaluate their goals and design digital solutions that make sense—whether it's a beautifully designed website, a high-performance app, or both. Let us guide you through the decision-making process so you can focus on growing your business with confidence in the digital space.
-//           </p>
-//         );
-//     
-//     case "why-businesses-need-websites":
-//       return (
-//         <>
-//           <h2 className="text-2xl font-bold mb-4">1. The Digital First Impression</h2>
-//           <p>
-//             In 2025, your website is often the first interaction people have with your brand. It's your digital storefront, open 24/7 and accessible from anywhere in the world. A well-designed website instantly builds credibility, gives potential clients a clear understanding of who you are, and sets the tone for your business relationship. Without one, you risk being overlooked entirely in a highly competitive online marketplace.
-//           </p>
-//           
-//           <h2 className="text-2xl font-bold mb-4 mt-8">2. Visibility and Searchability</h2>
-//           <p>
-//             Consumers today rely on search engines for everything—from finding local services to researching product reviews. If your business isn't online, it might as well be invisible. A website optimized for search engines ensures that customers can find you when they're actively looking for what you offer. It's not just about being online; it's about being discoverable in the moments that matter most.
-//           </p>
-//           
-//           <h2 className="text-2xl font-bold mb-4 mt-8">3. Central Hub for Information and Action</h2>
-//           <p>
-//             Your website acts as the central hub for your brand—bringing together essential information like services, pricing, testimonials, FAQs, and contact options. It also allows you to guide users toward specific actions: booking appointments, making purchases, or signing up for newsletters. Without a centralized digital presence, you're likely missing out on countless opportunities to convert interest into action.
-//           </p>
-//           
-//           <h2 className="text-2xl font-bold mb-4 mt-8">4. Trust and Professionalism</h2>
-//           <p>
-//             A professional website signals that your business is legitimate, trustworthy, and invested in providing a solid customer experience. In contrast, businesses without a website can appear outdated or even suspicious to modern consumers. In 2025, having a secure, responsive, and visually appealing website isn't just a bonus—it's expected.
-//           </p>
-//           
-//           <h2 className="text-2xl font-bold mb-4 mt-8">5. Future-Proofing Your Business</h2>
-//           <p>
-//             As more consumers shift to digital-first behavior, having a website isn't just about staying relevant—it's about staying in business. Whether you're a local service provider or a growing startup, your website is your foundation for future growth, marketing, and customer engagement. Now is the time to invest in your digital presence and build a platform that supports long-term success.
-//           </p>
-//         );
-//     
-//     case "starting-digital-transformation":
-//       return (
-//         <>
-//           <h2 className="text-2xl font-bold mb-4">1. What Is Digital Transformation?</h2>
-//           <p>
-//             Digital transformation is the process of integrating digital technologies into all areas of your business to create more value, streamline operations, and enhance customer experiences. It's not just about going paperless or launching an app—it's about reimagining how your company works and delivers in today's digital-first world. Every business, no matter the size or industry, can benefit from embracing this shift.
-//           </p>
-//           
-//           <h2 className="text-2xl font-bold mb-4 mt-8">2. Why It Matters Now More Than Ever?</h2>
-//           <p>
-//             The pace of change in technology and consumer behavior has accelerated dramatically. Customers expect fast, seamless, and digital-first experiences. Companies that resist change risk falling behind competitors who are more adaptable and efficient. Embracing digital transformation is no longer a luxury—it's a necessity to remain relevant, competitive, and resilient in a constantly evolving market.
-//           </p>
-//           
-//           <h2 className="text-2xl font-bold mb-4 mt-8">3. Website or App? Choosing the Right Starting Point</h2>
-//           <p>
-//             For many businesses, the first step in their digital journey is creating a strong online presence. This could mean building a modern website, developing a mobile app, or both—depending on your goals and audience. A website is ideal for visibility, accessibility, and credibility, while an app can offer deeper engagement, personalized experiences, and offline functionality. Choosing the right platform depends on your business model, customer behavior, and long-term vision.
-//           </p>
-//           
-//           <h2 className="text-2xl font-bold mb-4 mt-8">4. Common Challenges and How to Overcome Them</h2>
-//           <p>
-//             Many businesses delay their digital transformation because of fear—fear of complexity, cost, or change itself. The key is to start small, with clear goals and measurable outcomes. Partnering with experienced professionals can help you navigate the process, avoid common pitfalls, and implement solutions that are scalable, secure, and aligned with your strategy. With the right support, transformation doesn't have to be overwhelming.
-//           </p>
-//           
-//           <h2 className="text-2xl font-bold mb-4 mt-8">5. Your Next Step Starts Here</h2>
-//           <p>
-//             Starting your digital transformation journey is about making intentional, future-focused decisions. Whether it's automating internal processes, enhancing customer experience, or expanding your reach online, we're here to help you get started. Our team builds custom websites, mobile apps, and smart solutions tailored to your unique business needs—so you can confidently move forward in a digital world.
-//           </p>
-//         </>
-//       );
-//     
-//     case "why-digital-transformation-matters":
-//       return (
-//         <>
-//           <h2 className="text-2xl font-bold mb-4">The Digital Imperative</h2>
-//           <p>
-//             Digital transformation is no longer optional—it's imperative for businesses that want to remain competitive in today's rapidly evolving marketplace. As we move further into 2024, the pace of technological change continues to accelerate, and customer expectations are higher than ever.
-//           </p>
-//           
-//           <h2 className="text-2xl font-bold mb-4 mt-8">1. Meeting Evolving Customer Expectations</h2>
-//           <p>
-//             Today's customers expect seamless, personalized experiences across all touchpoints.
-//           </p>
-//           
-//           <h2 className="text-2xl font-bold mb-4 mt-8">2. Gaining Competitive Advantage</h2>
-//           <p>
-//             Organizations that embrace digital transformation can outpace competitors by being more agile, efficient, and customer-centric.
-//           </p>
-//         </>
-//       );
-//     
-//     case "why-digital-transformation-essential":
-//       return (
-//         <>
-//           <h2 className="text-2xl font-bold mb-4">1. The Digital Shift Is No Longer Optional</h2>
-//           <p>
-//             In today's fast-paced digital world, the way businesses operate and engage with customers has fundamentally changed. Digital transformation is more than just adopting new tools—it's about rethinking how your company delivers value. From internal processes to customer experiences, businesses that embrace modern digital solutions are more agile, efficient, and competitive in the marketplace.
-//           </p>
-//           
-//           <h2 className="text-2xl font-bold mb-4 mt-8">2. Build a Strong Digital Presence</h2>
-//           <p>
-//             One of the most visible and impactful steps in digital transformation is establishing a strong digital presence through a professional website or mobile app. A well-designed platform allows your business to be accessible 24/7, reach new markets, and provide seamless customer interactions. Whether you're looking to streamline booking processes, showcase your services, or sell products online, digital tools can automate manual tasks and significantly improve user satisfaction.
-//           </p>
-//           
-//           <h2 className="text-2xl font-bold mb-4 mt-8">3. Prepare for the Future</h2>
-//           <p>
-//             Digital transformation also means future-proofing your business. Markets evolve, customer expectations shift, and technologies advance quickly. By investing in scalable, adaptive digital solutions now, you position your business to stay ahead of the curve. It also opens the door to data-driven decision-making, smarter resource allocation, and more meaningful engagement with your audience.
-//           </p>
-//           
-//           <h2 className="text-2xl font-bold mb-4 mt-8">4. Partner With Experts to Lead the Way</h2>
-//           <p>
-//             At our company, we specialize in helping businesses of all sizes embrace digital transformation through custom-built websites, apps, and tailored solutions. Whether you're just getting started or looking to improve existing systems, we're here to guide you through every step of the journey—so you can thrive in the digital era.
-//           </p>
-//         </>
-//       );
-//     
-//     default:
-//       return (
-//         <div className="text-center py-12">
-//           <h2 className="text-2xl font-bold mb-4">Article Not Found</h2>
-//           <p>Sorry, the article you're looking for doesn't exist or has been moved.</p>
-//           <Link href="/blog" className="text-blue-600 hover:text-blue-800 mt-4 inline-block">
-//             Return to Blog
-//           </Link>
-//         </div>
-//       );
-// }
-
 // Update the type definition to match Next.js expectations
 type BlogPageProps = {
   params: {
@@ -268,7 +60,7 @@ export default function BlogPostPage({ params }: BlogPageProps) {
   const { slug } = params;
   
   // Find the blog post with the matching slug
-  const post = blogPosts.find((post) => post.slug === slug);
+  const post = getBlogPostData(slug);
   
   // Keep only this renderContent function inside the component
   const renderContent = () => {
