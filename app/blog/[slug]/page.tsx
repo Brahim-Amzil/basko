@@ -47,13 +47,12 @@ const getBlogPostData = (slug: string) => {
   return blogPosts.find(post => post.slug === slug);
 };
 
-// Update the type definition to match Next.js expectations
-type Params = {
-  slug: string;
-};
-
-// Then update your component to use the correct type
-export default function BlogPostPage({ params }: { params: Params }) {
+// Use the Next.js recommended approach for page props
+export default function BlogPostPage({
+  params,
+}: {
+  params: { slug: string }
+}) {
   const { slug } = params;
   
   // Find the blog post with the matching slug
