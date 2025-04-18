@@ -285,7 +285,7 @@ export default function Home() {
             </p>
             <Link
   href="/contact"
-  className="bg-gradient-to-r from-blue-200 to-purple-400 hover:from-purple-200 hover:to-blue-400 transition-colors px-8 py-3 rounded-xl font-medium inline-flex items-center gap-2 group relative border-2 border-purple-300 text-black"
+  className="bg-gradient-to-r from-blue-200 to-purple-400 hover:from-purple-200 hover:to-blue-400 transition-colors px-8 py-3 rounded-[5px] font-medium inline-flex items-center gap-2 group relative border-2 border-blue-500 text-black"
 >
   Contact Us
   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform text-darkblue-600" />
