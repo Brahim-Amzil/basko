@@ -240,7 +240,7 @@ export default function Home() {
               Featured Projects
             </h2>
             <p className="text-2xl text-gray-300 max-w-3xl mx-auto">
-              Take a look at some of our recent work that showcases our expertise and capabilities.
+              Take a look at some of our recent work.
             </p>
           </div>
           {/* Add the FeaturedProjects component */}

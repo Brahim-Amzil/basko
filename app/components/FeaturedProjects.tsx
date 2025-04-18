@@ -15,7 +15,7 @@ export default function FeaturedProjects() {
       id: "01",
       title: "Seemo Shuttle",
       image: "/images/projects/01.jpg",
-      url: "https://https://seemoshuttle.com/nw_home/",
+      url: "https://seemoshuttle.com/nw_home/",
       description: "Transportation service website with booking functionality"
     },
     {
