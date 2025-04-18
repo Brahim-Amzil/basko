@@ -24,41 +24,47 @@ export default function ContactPage() {
     }))
   }
 
+  // Fixed handleSubmit function
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault()
-    setIsSubmitting(true)
-    setSubmitError("")
-
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitError(""); // Use submitError instead of formError
+    
     try {
-      // Send form data to API route
       const response = await fetch('/api/contact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          projectDescription: formData.projectDescription,
+          budget: formData.budget,
+        }),
       });
-
+      
       const data = await response.json();
       
-      if (!data.success) {
-        throw new Error(data.message || 'Failed to send message');
+      if (!response.ok) {
+        throw new Error(data.message || data.error || 'Failed to send message');
       }
       
-      setSubmitSuccess(true)
+      // Success
       setFormData({
         name: "",
         email: "",
         projectDescription: "",
         budget: "",
-      })
+      });
+      setSubmitSuccess(true);
     } catch (error) {
-      setSubmitError("There was an error submitting your form. Please try again.")
       console.error('Error:', error);
+      setSubmitError(error.message || 'Failed to send message. Please try again later.');
     } finally {
-      setIsSubmitting(false)
+      setIsSubmitting(false);
     }
-  }
+  };
 
   return (
     <main className="pt-24 pb-16 relative">

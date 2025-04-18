@@ -9,6 +9,9 @@ import ServiceCard from "@/components/service-card"
 import { useState, useEffect, useRef } from "react"
 import ParallaxHero from "@/components/parallax-hero"
 
+// Remove this duplicate import
+// import FeaturedProjects from "./components/FeaturedProjects";
+
 export default function Home() {
   // State for the typing animation
   const [displayText, setDisplayText] = useState("");
@@ -240,12 +243,16 @@ export default function Home() {
               Take a look at some of our recent work that showcases our expertise and capabilities.
             </p>
           </div>
+          {/* Add the FeaturedProjects component */}
           <FeaturedProjects />
+          
+          {/* Your other existing sections */}
           <div className="text-center mt-12">
-            <Link
-              href="/portfolio"
-              className="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 font-medium group relative overflow-hidden px-6 py-2"
-            >
+          <Link
+  href="#"
+  onClick={(e) => e.preventDefault()}
+  className="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 font-medium group relative overflow-hidden px-6 py-2"
+>
               <span className="relative z-10">View All Projects</span>
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform relative z-10" />
               <span className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-blue-600 to-cyan-500 group-hover:h-full transition-all duration-300 ease-in-out z-0"></span>
