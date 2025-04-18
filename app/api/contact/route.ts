@@ -88,8 +88,9 @@ export async function POST(request: Request) {
       { 
         success: false, 
         message: 'Failed to send email', 
-        error: error.message,
-        stack: process.env.NODE_ENV === 'development' ? error.stack : undefined 
+        error: error instanceof Error ? error.message : 'Unknown error',
+        stack: process.env.NODE_ENV === 'development' ? 
+          (error instanceof Error ? error.stack : undefined) : undefined 
       },
       { status: 500 }
     );

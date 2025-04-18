@@ -60,7 +60,7 @@ export default function ContactPage() {
       setSubmitSuccess(true);
     } catch (error) {
       console.error('Error:', error);
-      setSubmitError(error.message || 'Failed to send message. Please try again later.');
+      setSubmitError(error instanceof Error ? error.message : 'Failed to send message. Please try again later.');
     } finally {
       setIsSubmitting(false);
     }
