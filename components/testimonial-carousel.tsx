@@ -10,7 +10,7 @@ const testimonials = [
     quote:
       "Working with Basko•Media transformed our online presence. Their team delivered a website that exceeded our expectations and has significantly increased our customer engagement.",
     author: "Sarah Johnson",
-    position: "CEO, TechStart Inc.",
+    position: "CEO, SeemoShuttle",
     avatar: "/images/testimonial-sarah.jpg",
   },
   {
@@ -18,15 +18,15 @@ const testimonials = [
     quote:
       "The mobile app they developed for us has been a game-changer. User-friendly, fast, and exactly what we envisioned. Their attention to detail and commitment to quality is impressive.",
     author: "Michael Chen",
-    position: "Founder, HealthTrack",
+    position: "Founder, ConvertPrice",
     avatar: "/images/testimonial-michael.jpg",
   },
   {
     id: 3,
     quote:
       "Their AI chatbot solution has reduced our customer service costs by 40% while improving response times. The team was professional, knowledgeable, and a pleasure to work with.",
-    author: "Emily Rodriguez",
-    position: "CTO, Global Retail",
+    author: "Said Koutti",
+    position: "CTO, HProd",
     avatar: "/images/testimonial-emily.jpg",
   },
 ]

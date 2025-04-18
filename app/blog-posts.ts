@@ -41,7 +41,7 @@ export const blogPosts: BlogPost[] = [
     content: "",
     image: "/images/placeholder.jpg",
     date: "March 5, 2025",
-    author: "Emily Rodriguez",
+    author: "Said Koutti",
     category: "Digital Transformation"
   },
   {
